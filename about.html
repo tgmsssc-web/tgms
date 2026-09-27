@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | TG Model School & Junior College – Dandepally</title>
+  <meta name="description" content="About TG Model School & Junior College, Dandepally – the aims, objectives and educational philosophy of Telangana Model Schools.">
+  <style>
+    :root{
+      --navy:#06234f;
+      --navy2:#082e67;
+      --gold:#e7bd32;
+      --gold2:#f2cf57;
+      --ink:#132a49;
+      --muted:#65748a;
+      --bg:#f3f7fb;
+      --white:#fff;
+      --line:#dce4ed;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.7;
+    }
+    a{color:inherit;text-decoration:none}
+    .topbar{
+      background:var(--navy);
+      color:#fff;
+      text-align:center;
+      padding:14px 18px;
+      font-size:16px;
+      letter-spacing:.3px;
+    }
+    header{
+      background:#fff;
+      border-bottom:1px solid var(--line);
+      position:sticky;
+      top:0;
+      z-index:20;
+    }
+    .header-inner{
+      max-width:1180px;
+      margin:auto;
+      padding:18px 24px;
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+    .logo{
+      width:76px;
+      height:76px;
+      object-fit:contain;
+      flex:none;
+    }
+    .brand h1{
+      margin:0;
+      color:var(--navy);
+      font-size:25px;
+      line-height:1.15;
+      letter-spacing:.2px;
+    }
+    .brand p{
+      margin:7px 0 0;
+      color:#6a7280;
+      font-size:14px;
+      font-weight:700;
+      letter-spacing:1.2px;
+    }
+    nav{
+      background:#fff;
+      border-top:1px solid #eef2f6;
+      border-bottom:1px solid #eef2f6;
+    }
+    nav .nav-inner{
+      max-width:1180px;
+      margin:auto;
+      display:flex;
+      flex-wrap:wrap;
+      gap:0;
+      padding:0 24px;
+    }
+    nav a{
+      padding:13px 15px;
+      font-weight:700;
+      color:var(--navy);
+      font-size:14px;
+    }
+    nav a:hover, nav a.active{
+      color:#8b6b00;
+      background:#fff9df;
+    }
+    .hero{
+      background:linear-gradient(135deg,var(--navy),var(--navy2));
+      color:#fff;
+      padding:72px 24px 78px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero:after{
+      content:"";
+      position:absolute;
+      width:650px;height:650px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:50%;
+      right:-250px;top:-320px;
+    }
+    .hero-inner{
+      max-width:1050px;
+      margin:auto;
+      position:relative;
+      z-index:2;
+    }
+    .eyebrow{
+      color:var(--gold2);
+      text-transform:uppercase;
+      letter-spacing:3px;
+      font-weight:800;
+      font-size:14px;
+      margin-bottom:12px;
+    }
+    .hero h2{
+      font-size:clamp(34px,5vw,58px);
+      line-height:1.08;
+      margin:0 0 18px;
+    }
+    .hero p{
+      max-width:780px;
+      margin:0;
+      font-size:18px;
+      color:#dbe7f7;
+    }
+    main{
+      max-width:1050px;
+      margin:-38px auto 70px;
+      padding:0 20px;
+      position:relative;
+      z-index:5;
+    }
+    .card{
+      background:#fff;
+      border-radius:18px;
+      padding:34px;
+      margin-bottom:22px;
+      box-shadow:0 12px 32px rgba(6,35,79,.08);
+      border:1px solid #e7edf4;
+    }
+    .card h3{
+      margin:0 0 14px;
+      color:var(--navy);
+      font-size:27px;
+    }
+    .card h4{
+      color:var(--navy);
+      margin:24px 0 7px;
+      font-size:20px;
+    }
+    .card p{margin:0 0 12px}
+    .lead{
+      font-size:18px;
+      color:#3d5068;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
+    }
+    .objective{
+      background:#f8fafc;
+      border-left:5px solid var(--gold);
+      padding:22px;
+      border-radius:10px;
+    }
+    .objective h4{margin:0 0 7px;font-size:19px}
+    .objective p{margin:0;color:#586b81}
+    ul{
+      margin:12px 0 0;
+      padding-left:22px;
+    }
+    li{margin:8px 0}
+    .quote{
+      background:var(--navy);
+      color:#fff;
+      border-radius:16px;
+      padding:30px;
+      text-align:center;
+      font-size:23px;
+      font-weight:700;
+      line-height:1.45;
+    }
+    .quote span{
+      display:block;
+      color:var(--gold2);
+      font-size:13px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-top:12px;
+    }
+    footer{
+      background:var(--navy);
+      color:#d7e2f2;
+      padding:36px 24px;
+    }
+    .footer-inner{max-width:1050px;margin:auto}
+    footer strong{color:#fff}
+    .sources{
+      margin-top:18px;
+      font-size:12px;
+      color:#7a899b;
+    }
+    @media(max-width:760px){
+      .topbar{font-size:14px}
+      .header-inner{padding:13px 18px}
+      .logo{width:64px;height:64px}
+      .brand h1{font-size:19px}
+      .brand p{font-size:11px;letter-spacing:.7px}
+      nav .nav-inner{padding:0 12px}
+      nav a{padding:11px 9px;font-size:12px}
+      .hero{padding:54px 20px 62px}
+      .hero p{font-size:16px}
+      main{padding:0 14px}
+      .card{padding:24px 20px}
+      .grid{grid-template-columns:1fr}
+      .quote{font-size:19px;padding:25px 18px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">Government Educational Institution</div>
+
+  <header>
+    <div class="header-inner">
+      <img src="logo.png" alt="TG Model School & Junior College logo" class="logo">
+      <div class="brand">
+        <h1>TG MODEL SCHOOL &amp; JUNIOR COLLEGE</h1>
+        <p>DANDEPALLY · MANCHERIAL DISTRICT · TELANGANA</p>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="academics.html">Academics</a>
+      <a href="faculty.html">Faculty &amp; Staff</a>
+      <a href="examinations.html">Examinations</a>
+      <a href="notices.html">Notices</a>
+      <a href="achievements.html">Achievements &amp; Activities</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">About Our Institution</div>
+      <h2>Education with purpose.<br>Opportunity with equality.</h2>
+      <p>
+        TG Model School &amp; Junior College, Dandepally, reflects the purpose of the
+        Telangana Model Schools initiative: expanding access to quality education and
+        nurturing students for academic, personal and social development.
+      </p>
+    </div>
+  </section>
+
+  <main>
+
+    <section class="card">
+      <h3>About TG Model School &amp; Junior College – Dandepally</h3>
+      <p class="lead">
+        Telangana Model Schools were established to provide quality education in
+        educationally backward areas and to create strong educational opportunities
+        for children, particularly in rural communities.
+      </p>
+      <p>
+        The Model School programme was designed to provide quality English-medium
+        education under the State syllabus from Class VI through Intermediate,
+        while giving importance to curricular and co-curricular development.
+      </p>
+      <p>
+        The official Model School objectives emphasise holistic education,
+        communication skills, student-centred learning, moral and ethical values,
+        scientific and rational thinking, leadership and the development of each
+        child's potential.
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>Why Model Schools Were Established</h3>
+      <p>
+        The Model School initiative originated as a Government of India programme
+        for Educationally Backward Blocks (EBBs), with the objective of providing
+        free quality education and creating schools that could play a pace-setting
+        role in their areas.
+      </p>
+      <p>
+        In Telangana, Model Schools were developed as institutions intended to
+        bring quality educational opportunities closer to students in rural and
+        educationally backward areas.
+      </p>
+      <p>
+        The programme also seeks to develop schools as centres of excellence and
+        to provide an environment in which students can grow academically,
+        socially, physically and morally.
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>Aim of Model Schools</h3>
+      <p class="lead">
+        The documented aim of Model Schools is to develop the character and
+        individuality of students and to nurture their intellectual, personal
+        and human potential.
+      </p>
+
+      <div class="grid">
+        <div class="objective">
+          <h4>Quality Education</h4>
+          <p>Provide quality education and establish strong benchmarks for student learning.</p>
+        </div>
+        <div class="objective">
+          <h4>Holistic Development</h4>
+          <p>Promote academic, co-curricular, social, physical and personal development.</p>
+        </div>
+        <div class="objective">
+          <h4>Scientific Thinking</h4>
+          <p>Encourage scientific, rational and independent thinking among learners.</p>
+        </div>
+        <div class="objective">
+          <h4>Communication &amp; Leadership</h4>
+          <p>Develop communication abilities, confidence, responsibility and leadership qualities.</p>
+        </div>
+        <div class="objective">
+          <h4>Values &amp; Character</h4>
+          <p>Strengthen moral and ethical values, discipline and character building.</p>
+        </div>
+        <div class="objective">
+          <h4>Centre of Excellence</h4>
+          <p>Enable Model Schools to play a pace-setting role and contribute to improvement in their educational communities.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Our Educational Philosophy</h3>
+      <p>
+        The Model School philosophy recognises that every child is a unique
+        individual with diverse talents and potential. Education therefore goes
+        beyond examination performance and aims to prepare students for life.
+      </p>
+      <ul>
+        <li>Nurturing the intellectual abilities of every child.</li>
+        <li>Developing scientific and rational thinking.</li>
+        <li>Building self-confidence, responsibility and discipline.</li>
+        <li>Developing leadership qualities and communication skills.</li>
+        <li>Promoting moral and ethical values.</li>
+        <li>Encouraging learning through curricular and co-curricular experiences.</li>
+        <li>Supporting all-round personality and character development.</li>
+        <li>Preparing students to respond to changing knowledge, technology and society.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>Our Vision</h3>
+      <p class="lead">
+        To provide high-quality education that helps students develop knowledge,
+        skills, values, confidence and responsibility, enabling them to become
+        capable and responsible citizens.
+      </p>
+
+      <h4>Our Mission</h4>
+      <p>
+        To create a student-centred learning environment that combines academic
+        excellence with character formation, scientific thinking, creativity,
+        communication, leadership, sports and co-curricular development.
+      </p>
+    </section>
+
+    <section class="quote">
+      Every child is a unique individual with diverse talents and immense potential.
+      <span>Model School Educational Philosophy</span>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <strong>TG MODEL SCHOOL &amp; JUNIOR COLLEGE</strong><br>
+      Dandepally · Mancherial District · Telangana
+      <div class="sources">
+        The institutional purpose and Model School objectives presented on this page
+        are based on information published by the Government of Telangana.
+      </div>
+      <div style="margin-top:18px;">© 2026 TG Model School. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
