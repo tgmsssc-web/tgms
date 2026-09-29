@@ -1,359 +1,628 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
 
-<title>Notices | TG Model School & Junior College</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-<style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+  <meta name="description"
+        content="Latest Notices and Announcements - TG Model School & Junior College">
 
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#eef3f8;
-  color:#26364a;
-  line-height:1.7;
-}
+  <title>Notices | TG Model School & Junior College</title>
 
-.topbar{
-  background:#06264d;
-  color:white;
-  text-align:center;
-  padding:12px 10px;
-  font-size:18px;
-  letter-spacing:.4px;
-}
+  <link rel="icon" href="logo.png" type="image/png">
 
-.header{
-  background:white;
-  display:flex;
-  align-items:center;
-  padding:18px 28px;
-  gap:18px;
-  border-bottom:1px solid #e5e5e5;
-}
+  <style>
 
-.logo{
-  width:105px;
-  height:105px;
-  object-fit:contain;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-.school-name{
-  color:#082d5b;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f8fc;
+      color: #1f2937;
+      line-height: 1.6;
+    }
 
-.school-name h1{
-  font-size:30px;
-  line-height:1.15;
-  margin-bottom:6px;
-}
+    /* HEADER */
 
-.school-name p{
-  color:#66717d;
-  font-size:15px;
-  letter-spacing:1px;
-}
+    .top-bar {
+      background: #062b57;
+      color: white;
+      text-align: center;
+      padding: 10px 15px;
+      font-size: 14px;
+    }
 
-.hero{
-  background:linear-gradient(135deg,#06264d,#103f78);
-  color:white;
-  padding:70px 8%;
-}
+    header {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
 
-.hero small{
-  color:#f2c43d;
-  font-size:16px;
-  font-weight:bold;
-  letter-spacing:2px;
-}
+    .header-inner {
+      max-width: 1150px;
+      margin: auto;
+      padding: 14px 20px;
 
-.hero h2{
-  font-size:48px;
-  line-height:1.15;
-  margin:15px 0;
-}
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-.hero p{
-  max-width:750px;
-  color:#dce7f4;
-  font-size:19px;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
 
-.container{
-  max-width:1050px;
-  margin:50px auto;
-  padding:0 22px;
-}
+    .brand img {
+      width: 78px;
+      height: 78px;
+      object-fit: contain;
+    }
 
-.notice{
-  background:white;
-  border-radius:20px;
-  margin-bottom:25px;
-  padding:30px;
-  box-shadow:0 8px 25px rgba(0,0,0,.06);
-  border-left:6px solid #e3b52e;
-}
+    .brand-text h1 {
+      color: #073b70;
+      font-size: 22px;
+      line-height: 1.2;
+    }
 
-.notice-label{
-  color:#c49b20;
-  font-weight:bold;
-  letter-spacing:2px;
-  font-size:14px;
-  margin-bottom:8px;
-}
+    .brand-text p {
+      color: #6b7280;
+      font-size: 13px;
+      margin-top: 6px;
+      letter-spacing: 0.5px;
+    }
 
-.notice h3{
-  color:#092f5e;
-  font-size:26px;
-  margin-bottom:8px;
-}
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+    }
 
-.notice p{
-  color:#5e6a77;
-  font-size:17px;
-}
+    nav a {
+      text-decoration: none;
+      color: #123f63;
+      padding: 9px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+    }
 
-.notice-date{
-  display:inline-block;
-  margin-top:15px;
-  background:#edf3fa;
-  color:#123e6e;
-  padding:6px 12px;
-  border-radius:20px;
-  font-size:14px;
-  font-weight:bold;
-}
+    nav a:hover,
+    nav a.active {
+      background: #eaf3fb;
+      color: #0b4f8a;
+    }
 
-.info{
-  background:#eaf1f8;
-  border-left:6px solid #d9ad27;
-  padding:25px;
-  border-radius:15px;
-  margin-top:35px;
-}
+    /* HERO */
 
-.info h3{
-  color:#092f5e;
-  margin-bottom:8px;
-}
+    .hero {
+      background: linear-gradient(135deg, #062b57, #0b4f8a);
+      color: white;
+      text-align: center;
+      padding: 65px 20px;
+    }
 
-.info p{
-  color:#526171;
-}
+    .hero h2 {
+      font-size: 44px;
+      margin-bottom: 10px;
+    }
 
-.back{
-  text-align:center;
-  margin:40px 0 60px;
-}
+    .hero p {
+      font-size: 17px;
+      color: #e6eef7;
+    }
 
-.back a{
-  display:inline-block;
-  background:#0b3b6d;
-  color:white;
-  text-decoration:none;
-  padding:14px 30px;
-  border-radius:10px;
-  font-size:17px;
-}
+    /* MAIN */
 
-.footer{
-  background:#082f5b;
-  color:white;
-  text-align:center;
-  padding:35px 20px;
-  font-size:17px;
-}
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 50px 20px;
+    }
 
-@media(max-width:600px){
+    .section-heading {
+      margin-bottom: 25px;
+    }
 
-.header{
-  padding:14px 20px;
-}
+    .section-heading h2 {
+      color: #0b4f8a;
+      font-size: 30px;
+      border-left: 5px solid #f4c430;
+      padding-left: 13px;
+    }
 
-.logo{
-  width:90px;
-  height:90px;
-}
+    .section-heading p {
+      margin-top: 8px;
+      color: #667085;
+    }
 
-.school-name h1{
-  font-size:22px;
-}
+    /* NOTICE CARDS */
 
-.school-name p{
-  font-size:11px;
-}
+    .notice-list {
+      display: grid;
+      gap: 18px;
+    }
 
-.hero{
-  padding:50px 28px;
-}
+    .notice-card {
+      background: white;
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+      border-left: 5px solid #0b4f8a;
+    }
 
-.hero h2{
-  font-size:38px;
-}
+    .notice-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
 
-.hero p{
-  font-size:17px;
-}
+    .notice-category {
+      display: inline-block;
+      color: #9a7600;
+      background: #fff7d6;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
 
-.container{
-  margin:35px auto;
-  padding:0 18px;
-}
+    .notice-date {
+      color: #6b7280;
+      font-size: 13px;
+      font-weight: 600;
+    }
 
-.notice{
-  padding:24px;
-}
+    .notice-card h3 {
+      color: #123f63;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
 
-.notice h3{
-  font-size:23px;
-}
+    .notice-card p {
+      color: #5f6b7a;
+      font-size: 15px;
+    }
 
-.notice p{
-  font-size:16px;
-}
+    .notice-status {
+      display: inline-block;
+      margin-top: 14px;
+      color: #0b4f8a;
+      font-size: 13px;
+      font-weight: bold;
+    }
 
-}
-</style>
+    /* INFORMATION BOX */
+
+    .info-box {
+      margin-top: 35px;
+      background: #eaf3fb;
+      border-left: 5px solid #0b4f8a;
+      padding: 25px;
+      border-radius: 8px;
+    }
+
+    .info-box h3 {
+      color: #0b3d70;
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .info-box p {
+      color: #4b5563;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #123f63;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+      margin-top: 30px;
+    }
+
+    footer h3 {
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    footer p {
+      color: #e6eef7;
+      font-size: 13px;
+      margin: 3px 0;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .header-inner {
+        padding: 12px 15px;
+      }
+
+      .brand {
+        width: 100%;
+      }
+
+      .brand img {
+        width: 68px;
+        height: 68px;
+      }
+
+      .brand-text h1 {
+        font-size: 18px;
+      }
+
+      .brand-text p {
+        font-size: 11px;
+      }
+
+      nav a {
+        font-size: 13px;
+        padding: 7px 9px;
+      }
+
+      .hero {
+        padding: 50px 18px;
+      }
+
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .container {
+        padding: 38px 15px;
+      }
+
+      .section-heading h2 {
+        font-size: 25px;
+      }
+
+      .notice-card {
+        padding: 20px;
+      }
+
+      .notice-top {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .notice-card h3 {
+        font-size: 18px;
+      }
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
-<div class="topbar">
-Government Educational Institution
-</div>
 
-<header class="header">
+  <!-- TOP BAR -->
 
-<img src="logo.png" class="logo" alt="TG Model School Logo">
+  <div class="top-bar">
+    Government Educational Institution
+  </div>
 
-<div class="school-name">
-<h1>TG MODEL SCHOOL &amp; JUNIOR COLLEGE</h1>
-<p>DANDEPALLY · MANCHERIAL DISTRICT · TELANGANA</p>
-</div>
 
-</header>
+  <!-- HEADER -->
 
-<section class="hero">
+  <header>
 
-<small>LATEST NOTICES</small>
+    <div class="header-inner">
 
-<h2>School News &amp;<br>Announcements</h2>
+      <a href="index.html" class="brand">
 
-<p>
-Important school notices, examination updates, academic information,
-circulars and programme announcements will be published on this page.
-</p>
+        <img src="logo.png"
+             alt="TG Model School Logo">
 
-</section>
+        <div class="brand-text">
 
-<main class="container">
+          <h1>
+            TG MODEL SCHOOL & JUNIOR COLLEGE
+          </h1>
 
-<div class="notice">
+          <p>
+            DANDEPALLY · MANCHERIAL DISTRICT · TELANGANA
+          </p>
 
-<div class="notice-label">SCHOOL</div>
+        </div>
 
-<h3>Important School Announcements</h3>
+      </a>
 
-<p>
-New school notices, official circulars and important instructions
-for students, parents and staff will be published here.
-</p>
 
-<span class="notice-date">Latest Updates</span>
+      <nav>
 
-</div>
+        <a href="index.html">
+          Home
+        </a>
 
-<div class="notice">
+        <a href="academics.html">
+          Academics
+        </a>
 
-<div class="notice-label">EXAMINATION</div>
+        <a href="faculty.html">
+          Faculty & Staff
+        </a>
 
-<h3>Examination Updates</h3>
+        <a href="examinations.html">
+          Examinations
+        </a>
 
-<p>
-Examination schedules, assessment information, instructions,
-hall-ticket updates and other examination-related notices
-will be published here as applicable.
-</p>
+        <a href="notices.html" class="active">
+          Notices
+        </a>
 
-<span class="notice-date">Examination Notices</span>
+        <a href="activities.html">
+          Activities
+        </a>
 
-</div>
+        <a href="gallery.html">
+          Gallery
+        </a>
 
-<div class="notice">
+        <a href="contact.html">
+          Contact
+        </a>
 
-<div class="notice-label">ACADEMIC</div>
+      </nav>
 
-<h3>Academic Updates</h3>
+    </div>
 
-<p>
-Important academic information, school-level academic activities,
-assessment updates and learning-related announcements will appear here.
-</p>
+  </header>
 
-<span class="notice-date">Academic Information</span>
 
-</div>
+  <!-- HERO -->
 
-<div class="notice">
+  <section class="hero">
 
-<div class="notice-label">EVENT</div>
+    <h2>
+      School Notices
+    </h2>
 
-<h3>School Activities &amp; Programmes</h3>
+    <p>
+      Latest announcements, information and important updates
+    </p>
 
-<p>
-Information about academic, cultural, sports, awareness and
-community-oriented school programmes will be added here.
-</p>
+  </section>
 
-<span class="notice-date">School Activities</span>
 
-</div>
+  <!-- MAIN -->
 
-<div class="notice">
+  <main class="container">
 
-<div class="notice-label">CIRCULAR</div>
 
-<h3>Official Circulars &amp; Instructions</h3>
+    <section>
 
-<p>
-Important instructions and circulars issued by the concerned
-educational authorities and the school will be published here.
-</p>
+      <div class="section-heading">
 
-<span class="notice-date">Official Information</span>
+        <h2>
+          Latest Notices
+        </h2>
 
-</div>
+        <p>
+          Important information for students, parents and staff.
+        </p>
 
-<div class="info">
+      </div>
 
-<h3>Important Note</h3>
 
-<p>
-Students and parents are advised to refer to the latest official
-school notice or concerned authority notification before taking
-any action based on examination or academic information.
-</p>
+      <div class="notice-list">
 
-</div>
 
-</main>
+        <!-- NOTICE 01 -->
 
-<div class="back">
-<a href="index.html">← Back to Home</a>
-</div>
+        <article class="notice-card">
 
-<footer class="footer">
+          <div class="notice-top">
 
-TG MODEL SCHOOL &amp; JUNIOR COLLEGE – DANDEPALLY<br>
-Mancherial District · Telangana
+            <span class="notice-category">
+              Academic
+            </span>
 
-</footer>
+            <span class="notice-date">
+              29 September 2026
+            </span>
+
+          </div>
+
+          <h3>
+            Academic Activities & School Updates
+          </h3>
+
+          <p>
+            Students and parents are advised to check the
+            school website regularly for academic activities,
+            schedules and important announcements.
+          </p>
+
+          <span class="notice-status">
+            Official School Update
+          </span>
+
+        </article>
+
+
+        <!-- NOTICE 02 -->
+
+        <article class="notice-card">
+
+          <div class="notice-top">
+
+            <span class="notice-category">
+              Examination
+            </span>
+
+            <span class="notice-date">
+              September 2026
+            </span>
+
+          </div>
+
+          <h3>
+            Examination Information
+          </h3>
+
+          <p>
+            Examination-related schedules, assessment
+            information and instructions will be published
+            through the school's official communication channels.
+          </p>
+
+          <span class="notice-status">
+            Examination Update
+          </span>
+
+        </article>
+
+
+        <!-- NOTICE 03 -->
+
+        <article class="notice-card">
+
+          <div class="notice-top">
+
+            <span class="notice-category">
+              School
+            </span>
+
+            <span class="notice-date">
+              September 2026
+            </span>
+
+          </div>
+
+          <h3>
+            Important School Announcements
+          </h3>
+
+          <p>
+            Students are requested to follow school
+            instructions and regularly check the latest
+            notices for important information.
+          </p>
+
+          <span class="notice-status">
+            School Information
+          </span>
+
+        </article>
+
+
+        <!-- NOTICE 04 -->
+
+        <article class="notice-card">
+
+          <div class="notice-top">
+
+            <span class="notice-category">
+              Students
+            </span>
+
+            <span class="notice-date">
+              September 2026
+            </span>
+
+          </div>
+
+          <h3>
+            Student Activities & Participation
+          </h3>
+
+          <p>
+            Information about academic, cultural, sports
+            and other student activities will be updated
+            on this page.
+          </p>
+
+          <span class="notice-status">
+            Student Information
+          </span>
+
+        </article>
+
+
+      </div>
+
+
+      <!-- INFORMATION -->
+
+      <div class="info-box">
+
+        <h3>
+          Notice Board Information
+        </h3>
+
+        <p>
+          Official school notices and announcements will be
+          added here as they are issued. Students and parents
+          are encouraged to check this page regularly for the
+          latest information.
+        </p>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h3>
+      TG MODEL SCHOOL & JUNIOR COLLEGE
+    </h3>
+
+    <p>
+      Government Educational Institution
+    </p>
+
+    <p>
+      Dandepally, Mancherial District, Telangana
+    </p>
+
+    <p>
+      © 2026 TG Model School. All Rights Reserved.
+    </p>
+
+  </footer>
+
 
 </body>
 </html>
