@@ -129,3 +129,13 @@ footer{background:#031a40;color:#b7c5d9;padding:28px 0;font-size:12px}
   .gallery-placeholder{height:180px}
   .footer-inner{flex-direction:column}
 }
+/* Mobile Hero spacing fix */
+@media (max-width: 700px) {
+  .hero {
+    padding-top: 85px;
+  }
+
+  .hero-content {
+    padding-top: 10px;
+  }
+}
