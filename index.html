@@ -279,16 +279,20 @@
       gap: 18px;
     }
 
-    .quick-card {
-      background: white;
-      padding: 25px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: inherit;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
-      border-bottom: 4px solid #f4c430;
-      transition: transform 0.2s ease;
-    }
+  .quick-card {
+    background: white;
+    padding: 26px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+    border-top: 4px solid #f4c430;
+    min-height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
 
     .quick-card:hover {
       transform: translateY(-4px);
