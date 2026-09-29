@@ -1,289 +1,1120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TG Model School & Junior College, Dandepally, Mancherial District, Telangana">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="TG Model School & Junior College, Dandepally, Mancherial District, Telangana">
+
   <title>TG Model School & Junior College | Dandepally</title>
+
   <link rel="icon" href="logo.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f8fc;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    /* ================= HEADER ================= */
+
+    .top-bar {
+      background: #062b57;
+      color: white;
+      text-align: center;
+      padding: 10px 15px;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    .header {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-inner {
+      max-width: 1150px;
+      margin: auto;
+      padding: 14px 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: #0b3d70;
+    }
+
+    .brand img {
+      width: 78px;
+      height: 78px;
+      object-fit: contain;
+    }
+
+    .brand-text h1 {
+      font-size: 22px;
+      line-height: 1.2;
+      color: #073b70;
+    }
+
+    .brand-text p {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #6b7280;
+      letter-spacing: 0.5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #123f63;
+      padding: 9px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #eaf3fb;
+      color: #0b4f8a;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      background:
+        radial-gradient(circle at 85% 30%,
+        rgba(255,255,255,0.10),
+        transparent 35%),
+        linear-gradient(135deg, #062b57, #0b4f8a);
+
+      color: white;
+      min-height: 540px;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-inner {
+      max-width: 1150px;
+      width: 100%;
+      margin: auto;
+      padding: 70px 25px;
+    }
+
+    .hero-label {
+      color: #f4c430;
+      font-weight: bold;
+      font-size: 15px;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    .hero h2 {
+      font-size: 58px;
+      line-height: 1.05;
+      max-width: 850px;
+      margin-bottom: 25px;
+    }
+
+    .hero h2 span {
+      color: #f4c430;
+    }
+
+    .hero-description {
+      font-size: 19px;
+      max-width: 700px;
+      color: #e6eef7;
+      margin-bottom: 18px;
+    }
+
+    .location {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .btn-primary {
+      background: #f4c430;
+      color: #062b57;
+    }
+
+    .btn-primary:hover {
+      background: #ffd95a;
+    }
+
+    .btn-outline {
+      color: white;
+      border: 1px solid rgba(255,255,255,0.6);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* ================= MAIN ================= */
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section-heading {
+      margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+      color: #0b4f8a;
+      font-size: 31px;
+      border-left: 5px solid #f4c430;
+      padding-left: 13px;
+    }
+
+    .section-heading p {
+      margin-top: 8px;
+      color: #667085;
+    }
+
+    /* ================= LATEST UPDATES ================= */
+
+    .updates {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .update-card {
+      background: white;
+      padding: 24px;
+      border-radius: 10px;
+      border-top: 4px solid #0b4f8a;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
+
+    .update-date {
+      color: #b48a00;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .update-card h3 {
+      color: #123f63;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .update-card p {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    .update-link {
+      display: inline-block;
+      margin-top: 12px;
+      color: #0b4f8a;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* ================= QUICK LINKS ================= */
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .quick-card {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+      border-bottom: 4px solid #f4c430;
+      transition: transform 0.2s ease;
+    }
+
+    .quick-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .quick-number {
+      color: #c29b12;
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .quick-card h3 {
+      color: #0b3d70;
+      font-size: 19px;
+      margin-bottom: 6px;
+    }
+
+    .quick-card p {
+      color: #667085;
+      font-size: 13px;
+    }
+
+    /* ================= SCHOOL AT A GLANCE ================= */
+
+    .glance {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .glance-card {
+      background: white;
+      text-align: center;
+      padding: 28px 15px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
+
+    .glance-card strong {
+      display: block;
+      color: #0b4f8a;
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+
+    .glance-card span {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    /* ================= PROGRAMMES ================= */
+
+    .programmes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .programme-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+      border-left: 5px solid #f4c430;
+    }
+
+    .programme-number {
+      color: #b38b00;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .programme-card h3 {
+      color: #0b3d70;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .programme-card p {
+      color: #667085;
+    }
+
+    /* ================= STUDENT ACTIVITIES ================= */
+
+    .activities {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .activity-card {
+      background: #eaf3fb;
+      min-height: 170px;
+      padding: 25px;
+      border-radius: 10px;
+      display: flex;
+      align-items: flex-end;
+      border-bottom: 4px solid #0b4f8a;
+    }
+
+    .activity-card h3 {
+      color: #0b3d70;
+      font-size: 20px;
+    }
+
+    /* ================= INFORMATION ================= */
+
+    .info-box {
+      background: #eaf3fb;
+      border-left: 5px solid #0b4f8a;
+      padding: 28px;
+      border-radius: 8px;
+    }
+
+    .info-box h3 {
+      color: #0b3d70;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .info-box p {
+      color: #4b5563;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #123f63;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    footer h3 {
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    footer p {
+      font-size: 13px;
+      margin: 3px 0;
+      color: #e6eef7;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 900px) {
+
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero h2 {
+        font-size: 45px;
+      }
+
+      .updates {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-links {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .glance {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .activities {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .top-bar {
+        font-size: 13px;
+      }
+
+      .header-inner {
+        padding: 12px 15px;
+      }
+
+      .brand {
+        width: 100%;
+      }
+
+      .brand img {
+        width: 68px;
+        height: 68px;
+      }
+
+      .brand-text h1 {
+        font-size: 18px;
+      }
+
+      .brand-text p {
+        font-size: 11px;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: center;
+      }
+
+      nav a {
+        font-size: 13px;
+        padding: 7px 9px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-inner {
+        padding: 60px 25px;
+      }
+
+      .hero-label {
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+
+      .hero h2 {
+        font-size: 42px;
+      }
+
+      .hero-description {
+        font-size: 17px;
+      }
+
+      .location {
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 40px 15px;
+      }
+
+      .section {
+        margin-bottom: 45px;
+      }
+
+      .section-heading h2 {
+        font-size: 25px;
+      }
+
+      .quick-links {
+        grid-template-columns: 1fr;
+      }
+
+      .glance {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .programmes {
+        grid-template-columns: 1fr;
+      }
+
+      .activity-card {
+        min-height: 140px;
+      }
+    }
+
+  </style>
 </head>
+
+
 <body>
 
-<header class="site-header">
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span>Government Educational Institution</span>
-      <span>Mancherial District, Telangana</span>
-    </div>
+
+  <!-- ================= TOP BAR ================= -->
+
+  <div class="top-bar">
+    Government Educational Institution
   </div>
 
-  <div class="header-main container">
-    <a class="brand" href="#home">
-      <img src="logo.png" alt="TG Model School & Junior College logo">
-      <div class="brand-text">
-        <h1>TG MODEL SCHOOL &amp; JUNIOR COLLEGE</h1>
-        <p>DANDEPALLY · MANCHERIAL DISTRICT · TELANGANA</p>
-      </div>
-    </a>
 
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <!-- ================= HEADER ================= -->
 
-    <nav class="nav" id="mainNav">
-      <a href="#home">Home</a>
-      <a href="about.html">About</a>
-      <a href="academics.html">Academics</a>
-      <a href="faculty.html">Faculty&amp; Staff</a><a href="examinations.html">Examinations</a> 
-      <a href="notices.html">Notices</a> 
-      <a href="activities.html">Achievements &amp; Activities</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+  <header class="header">
 
-<main id="home">
+    <div class="header-inner">
 
-<section class="hero">
+      <a href="index.html" class="brand">
 
-<div class="hero-overlay"></div>
+        <img src="logo.png"
+             alt="TG Model School Logo">
 
-<div class="container hero-content">
+        <div class="brand-text">
 
-<span class="eyebrow">TG MODEL SCHOOL & JUNIOR COLLEGE</span>
+          <h1>
+            TG MODEL SCHOOL & JUNIOR COLLEGE
+          </h1>
 
-<h2>Learning Today.<br><strong>Leading Tomorrow.</strong></h2>
+          <p>
+            DANDEPALLY · MANCHERIAL DISTRICT · TELANGANA
+          </p>
 
-<p>
-A centre for quality education, discipline, character and excellence.
-</p>
+        </div>
 
-<p>
-<strong>Dandepally, Mancherial District, Telangana</strong>
-</p>
+      </a>
 
-<div class="hero-actions">
 
-<a class="btn btn-gold" href="#about">
-Explore Our School
-</a>
+      <nav>
 
-<a class="btn btn-outline" href="examinations.html">
-View Examinations
-</a>
+        <a href="index.html" class="active">
+          Home
+        </a>
 
-</div>
+        <a href="academics.html">
+          Academics
+        </a>
 
-</div>
+        <a href="faculty.html">
+          Faculty & Staff
+        </a>
 
-</section>
+        <a href="examinations.html">
+          Examinations
+        </a>
 
-  <section class="quick-links">
-    <div class="container quick-grid">
-      <a href="academics.html"><span>01</span><b>Academics</b><small>Learning &amp; curriculum</small></a>
-<a href="faculty.html"><span>02</span><b>Faculty &amp; Staff</b><small>Our teaching team</small></a>
-<a href="examinations.html"><span>03</span><b>Examinations</b><small>Assessment &amp; exams</small></a>
-<a href="notices.html"><span>04</span><b>Notices</b><small>Latest updates</small></a>
-<a href="activities.html"><span>05</span><b>Achievements &amp; Activities</b><small>School life</small></a>
-<a href="gallery.html"><span>06</span><b>Gallery</b><small>School activities</small></a>
-<a href="contact.html"><span>07</span><b>Contact</b><small>Get in touch</small></a>
+        <a href="notices.html">
+          Notices
+        </a>
+
+        <a href="activities.html">
+          Activities
+        </a>
+
+        <a href="gallery.html">
+          Gallery
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </nav>
+
     </div>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <div class="hero-label">
+        TG MODEL SCHOOL & JUNIOR COLLEGE
+      </div>
+
+      <h2>
+        Learning Today.<br>
+        <span>Leading Tomorrow.</span>
+      </h2>
+
+      <p class="hero-description">
+        A centre for quality education, discipline,
+        character and excellence.
+      </p>
+
+      <p class="location">
+        Dandepally, Mancherial District, Telangana
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="academics.html"
+           class="btn btn-primary">
+          Explore Our School
+        </a>
+
+        <a href="examinations.html"
+           class="btn btn-outline">
+          View Examinations
+        </a>
+
+      </div>
+
+    </div>
+
   </section>
 
-  <section class="section latest-updates">
 
-  <div class="container">
+  <!-- ================= MAIN ================= -->
 
-    <div class="section-heading">
-      <span class="section-kicker">LATEST UPDATES</span>
-      <h2>Stay Updated</h2>
-      <p>Important information for students, parents and staff.</p>
-    </div>
+  <main class="container">
 
-    <div class="updates-grid">
 
-      <a class="update-card" href="notices.html">
-        <span class="update-number">01</span>
-        <div>
-          <h3>School Notices</h3>
-          <p>Latest announcements and important notices.</p>
-        </div>
-        <span class="update-arrow">→</span>
-      </a>
+    <!-- ================= LATEST UPDATES ================= -->
 
-      <a class="update-card" href="examinations.html">
-        <span class="update-number">02</span>
-        <div>
-          <h3>Examinations</h3>
-          <p>Exam schedules, updates and academic information.</p>
-        </div>
-        <span class="update-arrow">→</span>
-      </a>
+    <section class="section">
 
-      <a class="update-card" href="activities.html">
-        <span class="update-number">03</span>
-        <div>
-          <h3>Achievements & Activities</h3>
-          <p>Explore our students' achievements and school activities.</p>
-        </div>
-        <span class="update-arrow">→</span>
-      </a>
-
-      <a class="update-card" href="gallery.html">
-        <span class="update-number">04</span>
-        <div>
-          <h3>School Gallery</h3>
-          <p>View memorable moments from our school.</p>
-        </div>
-        <span class="update-arrow">→</span>
-      </a>
-
-    </div>
-
-  </div>
-
-  </section>
-    <div class="container two-col">
-      <div>
-        <span class="section-kicker">ABOUT OUR SCHOOL</span>
-        <h2>Education with purpose, discipline and excellence.</h2>
-        <p class="lead">TG Model School &amp; Junior College, Dandepally is committed to providing students with a strong academic foundation and opportunities for holistic development.</p>
-        <p>This official website is designed as a central information point for students, parents, staff and the community. School notices, academic information, activities, achievements and important resources can be published here.</p>
-        <a class="text-link" href="#contact">Know More →</a>
-      </div>
-      <div class="about-card">
-        <img src="logo.png" alt="School emblem">
-        <div>
-          <strong>Education · Discipline · Excellence</strong>
-          <p>Building confident learners and responsible citizens.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section soft" id="academics">
-    <div class="container">
       <div class="section-heading">
-        <div>
-          <span class="section-kicker">ACADEMICS</span>
-          <h2>Learning that prepares students for the future</h2>
+
+        <h2>
+          Latest Updates
+        </h2>
+
+        <p>
+          Important information and updates from the school.
+        </p>
+
+      </div>
+
+
+      <div class="updates">
+
+
+        <article class="update-card">
+
+          <div class="update-date">
+            Academic
+          </div>
+
+          <h3>
+            Academic Programmes
+          </h3>
+
+          <p>
+            Information about school education,
+            Junior College programmes and academic learning.
+          </p>
+
+          <a href="academics.html"
+             class="update-link">
+            View Academics →
+          </a>
+
+        </article>
+
+
+        <article class="update-card">
+
+          <div class="update-date">
+            Examinations
+          </div>
+
+          <h3>
+            Examination Information
+          </h3>
+
+          <p>
+            Examination schedules, assessment information
+            and important examination updates.
+          </p>
+
+          <a href="examinations.html"
+             class="update-link">
+            View Examinations →
+          </a>
+
+        </article>
+
+
+        <article class="update-card">
+
+          <div class="update-date">
+            School Notice
+          </div>
+
+          <h3>
+            Latest Notices
+          </h3>
+
+          <p>
+            School notices, announcements and
+            important information for students and parents.
+          </p>
+
+          <a href="notices.html"
+             class="update-link">
+            View Notices →
+          </a>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= QUICK LINKS ================= -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <h2>
+          Quick Links
+        </h2>
+
+        <p>
+          Access important sections of the school website.
+        </p>
+
+      </div>
+
+
+      <div class="quick-links">
+
+
+        <a href="academics.html"
+           class="quick-card">
+
+          <div class="quick-number">
+            01
+          </div>
+
+          <h3>
+            Academics
+          </h3>
+
+          <p>
+            Learning programmes and curriculum information.
+          </p>
+
+        </a>
+
+
+        <a href="faculty.html"
+           class="quick-card">
+
+          <div class="quick-number">
+            02
+          </div>
+
+          <h3>
+            Faculty & Staff
+          </h3>
+
+          <p>
+            Meet our teachers and supporting staff.
+          </p>
+
+        </a>
+
+
+        <a href="examinations.html"
+           class="quick-card">
+
+          <div class="quick-number">
+            03
+          </div>
+
+          <h3>
+            Examinations
+          </h3>
+
+          <p>
+            Examination schedules and assessment information.
+          </p>
+
+        </a>
+
+
+        <a href="notices.html"
+           class="quick-card">
+
+          <div class="quick-number">
+            04
+          </div>
+
+          <h3>
+            Notices
+          </h3>
+
+          <p>
+            Important school announcements and notices.
+          </p>
+
+        </a>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SCHOOL AT A GLANCE ================= -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <h2>
+          School at a Glance
+        </h2>
+
+        <p>
+          A quick overview of the school.
+        </p>
+
+      </div>
+
+
+      <div class="glance">
+
+
+        <div class="glance-card">
+
+          <strong>
+            VI – X
+          </strong>
+
+          <span>
+            School Classes
+          </span>
+
         </div>
-        <p>Academic programmes, examinations and student support information will be updated here.</p>
-      </div>
-      <div class="cards three">
-        <article class="info-card">
-          <div class="card-number">01</div>
-          <h3>School Education</h3>
-          <p>Class-wise academic learning, assessments and co-curricular development.</p>
-        </article>
-        <article class="info-card">
-          <div class="card-number">02</div>
-          <h3>Junior College</h3>
-          <p>Intermediate-level education with focused subject learning and guidance.</p>
-        </article>
-        <article class="info-card">
-          <div class="card-number">03</div>
-          <h3>Examinations</h3>
-          <p>Schedules, preparation resources, results and important examination notices.</p>
-        </article>
-      </div>
-    </div>
-  </section>
 
-  <section class="section" id="faculty">
-    <div class="container">
-      <span class="section-kicker">FACULTY &amp; STAFF</span>
-      <h2>Our dedicated teaching team</h2>
-      <p class="section-intro">The complete faculty directory can be added here with designation, subject and contact information as required.</p>
-      <div class="staff-preview">
-        <div><b>PGT</b><span>Post Graduate Teachers</span></div>
-        <div><b>TGT</b><span>Trained Graduate Teachers</span></div>
-        <div><b>JUNIOR COLLEGE</b><span>Intermediate faculty</span></div>
-      </div>
-    </div>
-  </section>
 
-  <section class="section navy" id="notices">
-    <div class="container">
-      <div class="section-heading light">
-        <div>
-          <span class="section-kicker">LATEST NOTICES</span>
-          <h2>School News &amp; Announcements</h2>
+        <div class="glance-card">
+
+          <strong>
+            2
+          </strong>
+
+          <span>
+            Sections per Class
+            (A & B)
+          </span>
+
         </div>
-        <a class="btn btn-small" href="#contact">View All Notices</a>
-      </div>
-      <div class="notice-list">
-        <article><time>NOTICE</time><div><h3>Important school announcements</h3><p>New notices and official circulars will appear in this section.</p></div></article>
-        <article><time>EXAM</time><div><h3>Examination updates</h3><p>Exam schedules, instructions and results can be published here.</p></div></article>
-        <article><time>EVENT</time><div><h3>School activities &amp; programmes</h3><p>Information about academic, cultural, sports and community activities.</p></div></article>
-      </div>
-    </div>
-  </section>
 
-  <section class="section soft" id="activities">
-    <div class="container">
-      <span class="section-kicker">ACTIVITIES &amp; ACHIEVEMENTS</span>
-      <h2>Beyond the classroom</h2>
-      <div class="cards three">
-        <article class="info-card"><h3>Sports</h3><p>Sports, physical education and student participation.</p></article>
-        <article class="info-card"><h3>Cultural Activities</h3><p>Celebrations, cultural programmes and creative expression.</p></article>
-        <article class="info-card"><h3>Student Achievements</h3><p>Academic, sports and other student accomplishments.</p></article>
-      </div>
-    </div>
-  </section>
 
-  <section class="section gallery" id="gallery">
-    <div class="container">
-      <span class="section-kicker">PHOTO GALLERY</span>
-      <h2>Moments from our school</h2>
-      <div class="gallery-grid">
-        <div class="gallery-placeholder"><span>Campus</span></div>
-        <div class="gallery-placeholder"><span>Classroom</span></div>
-        <div class="gallery-placeholder"><span>Activities</span></div>
-        <div class="gallery-placeholder"><span>Sports</span></div>
-      </div>
-      <p class="gallery-note">School photographs can be added here as they become available.</p>
-    </div>
-  </section>
+        <div class="glance-card">
 
-  <section class="contact-band" id="contact">
-    <div class="container contact-grid">
-      <div>
-        <span class="section-kicker">CONTACT</span>
-        <h2>TG Model School &amp; Junior College</h2>
-        <p>Dandepally, Mancherial District, Telangana</p>
-      </div>
-      <div class="contact-details">
-        <p><b>Address</b><br>Dandepally, Mancherial District, Telangana</p>
-        <p><b>Phone</b><br>To be updated</p>
-        <p><b>Email</b><br>To be updated</p>
-      </div>
-    </div>
-  </section>
-</main>
+          <strong>
+            ~50
+          </strong>
 
-<footer>
-  <div class="container footer-inner">
-    <div>
-      <b>TG MODEL SCHOOL &amp; JUNIOR COLLEGE</b>
-      <span>Dandepally · Mancherial District · Telangana</span>
-    </div>
-    <span>© <span id="year"></span> TG Model School. All Rights Reserved.</span>
-  </div>
-</footer>
+          <span>
+            Students per Section
+          </span>
 
-<script>
-  const toggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('#mainNav');
-  toggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open);
-  });
-  document.querySelectorAll('#mainNav a').forEach(a => a.addEventListener('click', () => {
-    nav.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
-  }));
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+        </div>
+
+
+        <div class="glance-card">
+
+          <strong>
+            ~500
+          </strong>
+
+          <span>
+            Students in Classes VI–X
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ACADEMIC PROGRAMMES ================= -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <h2>
+          Academic Programmes
+        </h2>
+
+        <p>
+          Education programmes offered by the institution.
+        </p>
+
+      </div>
+
+
+      <div class="programmes">
+
+
+        <div class="programme-card">
+
+          <div class="programme-number">
+            PROGRAMME 01
+          </div>
+
+          <h3>
+            School Education
+          </h3>
+
+          <p>
+            Classes VI to X with class-wise academic
+            learning, assessments, co-curricular
+            activities and student development.
+          </p>
+
+        </div>
+
+
+        <div class="programme-card">
+
+          <div class="programme-number">
+            PROGRAMME 02
+          </div>
+
+          <h3>
+            Junior College
+          </h3>
+
+          <p>
+            Intermediate-level education with focused
+            subject learning, academic guidance and
+            preparation for higher education.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= STUDENT ACTIVITIES ================= -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <h2>
+          Student Activities
+        </h2>
+
+        <p>
+          Learning extends beyond the classroom.
+        </p>
+
+      </div>
+
+
+      <div class="activities">
+
+
+        <div class="activity-card">
+
+          <h3>
+            Classroom Learning
+          </h3>
+
+        </div>
+
+
+        <div class="activity-card">
+
+          <h3>
+            Sports & Games
+          </h3>
+
+        </div>
+
+
+        <div class="activity-card">
+
+          <h3>
+            Cultural Activities
+          </h3>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= IMPORTANT INFORMATION ================= -->
+
+    <section class="section">
+
+      <div class="info-box">
+
+        <h3>
+          Important Information
+        </h3>
+
+        <p>
+          Students and parents can use this website to
+          access academic information, examination details,
+          faculty information, school notices and other
+          important updates of TG Model School & Junior College.
+        </p>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <h3>
+      TG MODEL SCHOOL & JUNIOR COLLEGE
+    </h3>
+
+    <p>
+      Government Educational Institution
+    </p>
+
+    <p>
+      Dandepally, Mancherial District, Telangana
+    </p>
+
+    <p>
+      © 2026 TG Model School. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
 </body>
 </html>
