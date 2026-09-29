@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +12,6 @@
   <link rel="icon" href="logo.png" type="image/png">
 
   <style>
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -27,8 +25,6 @@
       line-height: 1.6;
     }
 
-    /* TOP BAR */
-
     .top-bar {
       background: #062b57;
       color: white;
@@ -36,8 +32,6 @@
       padding: 10px 15px;
       font-size: 14px;
     }
-
-    /* HEADER */
 
     header {
       background: white;
@@ -48,7 +42,6 @@
       max-width: 1150px;
       margin: auto;
       padding: 14px 20px;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -63,8 +56,8 @@
     }
 
     .brand img {
-      width: 78px;
-      height: 78px;
+      width: 70px;
+      height: 70px;
       object-fit: contain;
     }
 
@@ -77,8 +70,7 @@
     .brand-text p {
       color: #6b7280;
       font-size: 13px;
-      margin-top: 6px;
-      letter-spacing: 0.5px;
+      margin-top: 5px;
     }
 
     nav {
@@ -103,8 +95,6 @@
       color: #0b4f8a;
     }
 
-    /* HERO */
-
     .hero {
       background: linear-gradient(135deg, #062b57, #0b4f8a);
       color: white;
@@ -113,4 +103,322 @@
     }
 
     .hero h2 {
-      font-size: 44
+      font-size: 44px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 17px;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #073b70;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #6b7280;
+      max-width: 750px;
+      margin: 0 auto 35px;
+    }
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .activity-card {
+      background: white;
+      padding: 28px 24px;
+      border-radius: 12px;
+      border-top: 4px solid #d4a72c;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .activity-card h3 {
+      color: #073b70;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .activity-card p {
+      color: #5b6470;
+      font-size: 15px;
+    }
+
+    .highlights {
+      margin-top: 55px;
+      background: white;
+      padding: 35px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .highlight-box {
+      min-height: 150px;
+      border: 2px dashed #b8c8d8;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #718096;
+      background: #f8fbfe;
+      padding: 20px;
+    }
+
+    .info-box {
+      margin-top: 40px;
+      background: #eef6fc;
+      border-left: 5px solid #0b4f8a;
+      padding: 22px;
+      border-radius: 8px;
+    }
+
+    .info-box h3 {
+      color: #073b70;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background: #062b57;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 30px;
+    }
+
+    footer p {
+      font-size: 14px;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 900px) {
+      .header-inner {
+        flex-direction: column;
+      }
+
+      .activity-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .highlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .activity-grid,
+      .highlight-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .brand {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav a {
+        font-size: 13px;
+        padding: 8px 9px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    Government Educational Institution | Telangana
+  </div>
+
+  <header>
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="TG Model School Logo">
+
+        <div class="brand-text">
+          <h1>TG Model School & Junior College</h1>
+          <p>Dandepally, Mancherial District, Telangana</p>
+        </div>
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="academics.html">Academics</a>
+        <a href="faculty.html">Faculty & Staff</a>
+        <a href="examinations.html">Examinations</a>
+        <a href="notices.html">Notices</a>
+        <a href="activities.html" class="active">Activities</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Student Activities</h2>
+    <p>
+      Developing confidence, creativity, leadership and teamwork
+      through learning beyond the classroom.
+    </p>
+  </section>
+
+  <main class="container">
+
+    <h2 class="section-title">Beyond the Classroom</h2>
+
+    <p class="section-subtitle">
+      TG Model School provides students with opportunities to participate
+      in academic, cultural, sports, creative and community-oriented activities.
+    </p>
+
+    <div class="activity-grid">
+
+      <div class="activity-card">
+        <h3>Sports & Games</h3>
+        <p>
+          Opportunities for students to participate in athletics,
+          indoor and outdoor games, physical education and sports events.
+        </p>
+      </div>
+
+      <div class="activity-card">
+        <h3>Cultural Activities</h3>
+        <p>
+          Cultural programmes, celebrations, music, dance, literary
+          activities and events that encourage creativity and expression.
+        </p>
+      </div>
+
+      <div class="activity-card">
+        <h3>Science & Academic Activities</h3>
+        <p>
+          Science exhibitions, academic competitions, quizzes,
+          projects and subject-based activities that promote curiosity.
+        </p>
+      </div>
+
+      <div class="activity-card">
+        <h3>Clubs & Competitions</h3>
+        <p>
+          Students are encouraged to take part in clubs, debates,
+          essay writing, drawing, elocution and other competitions.
+        </p>
+      </div>
+
+      <div class="activity-card">
+        <h3>Community & Awareness</h3>
+        <p>
+          Awareness programmes, environmental activities, cleanliness
+          drives and community-oriented initiatives.
+        </p>
+      </div>
+
+      <div class="activity-card">
+        <h3>Student Development</h3>
+        <p>
+          Activities focused on leadership, communication, teamwork,
+          discipline, responsibility and overall personality development.
+        </p>
+      </div>
+
+    </div>
+
+    <section class="highlights">
+
+      <h2 class="section-title">Activity Highlights</h2>
+
+      <p class="section-subtitle">
+        Selected photographs and highlights from school activities
+        can be displayed here.
+      </p>
+
+      <div class="highlight-grid">
+
+        <div class="highlight-box">
+          Sports & Games<br>
+          Photo Highlight
+        </div>
+
+        <div class="highlight-box">
+          Cultural Programme<br>
+          Photo Highlight
+        </div>
+
+        <div class="highlight-box">
+          Science & Academic Event<br>
+          Photo Highlight
+        </div>
+
+        <div class="highlight-box">
+          Student Competition<br>
+          Photo Highlight
+        </div>
+
+        <div class="highlight-box">
+          Awareness Programme<br>
+          Photo Highlight
+        </div>
+
+        <div class="highlight-box">
+          School Event<br>
+          Photo Highlight
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="info-box">
+
+      <h3>Important Information</h3>
+
+      <p>
+        Activity schedules and participation details are announced
+        by the school from time to time. Students are encouraged to
+        participate actively while maintaining discipline and academic focus.
+      </p>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p><strong>TG Model School & Junior College</strong></p>
+    <p>Dandepally, Mancherial District, Telangana</p>
+    <p>© 2026 TG Model School. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
