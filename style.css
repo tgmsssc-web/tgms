@@ -236,6 +236,7 @@ footer{background:#031a40;color:#b7c5d9;padding:28px 0;font-size:12px}
   margin-bottom: 18px;
 }
 
+
 /* Examination Links */
 
 .section .exam-links {
@@ -245,34 +246,35 @@ footer{background:#031a40;color:#b7c5d9;padding:28px 0;font-size:12px}
   margin-top: 15px;
 }
 
-.section .exam-link {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 100%;
+.section .exam-links a.exam-link {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
   box-sizing: border-box;
   padding: 16px 18px;
+  margin: 0;
   background: #ffffff;
   border: 1px solid #dce5ef;
   border-radius: 10px;
-  text-decoration: none;
-  color: var(--navy);
-  transition: 0.2s ease;
+  text-decoration: none !important;
+  color: var(--navy) !important;
 }
 
-.section .exam-link strong {
-  display: block;
+.section .exam-links a.exam-link strong {
+  display: block !important;
   font-size: 17px;
-  color: var(--navy);
+  color: var(--navy) !important;
+  text-decoration: none !important;
 }
 
-.section .exam-link span {
-  display: block;
+.section .exam-links a.exam-link span {
+  display: block !important;
   font-size: 14px;
-  color: var(--muted);
+  color: var(--muted) !important;
+  text-decoration: none !important;
 }
 
-.section .exam-link:hover {
+.section .exam-links a.exam-link:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
