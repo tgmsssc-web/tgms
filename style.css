@@ -231,3 +231,7 @@ footer{background:#031a40;color:#b7c5d9;padding:28px 0;font-size:12px}
 }
 
 }
+/* Examination notice spacing */
+.section .note {
+  margin-bottom: 18px;
+}
