@@ -338,6 +338,71 @@
         padding: 22px 16px;
       }
     }
+    /* MOBILE NAVIGATION */
+
+.menu-toggle {
+  display: none;
+  background: #08275c;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-links a {
+  display: inline-block;
+}
+
+@media (max-width: 700px) {
+
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px 18px;
+    font-size: 24px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #08275c;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 13px 18px;
+    color: #ffffff;
+    text-align: left;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .nav-links a.active {
+    background: #176ca5;
+    color: #ffffff !important;
+  }
+
+}
   </style>
 </head>
 
@@ -356,13 +421,29 @@
           Government Educational Institution
         </div>
       </div>
+<nav class="main-nav">
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="faculty.html" class="active">Faculty</a>
-        <a href="examinations.html">Examinations</a>
-      </nav>
+  <button class="menu-toggle" aria-label="Open navigation">
+    ☰
+  </button>
 
+  <div class="nav-links">
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="faculty.html" class="active">
+      Faculty & Staff
+    </a>
+
+    <a href="examinations.html">
+      Examinations
+    </a>
+
+  </div>
+
+</nav>
     </div>
   </header>
 
@@ -655,6 +736,19 @@
     </p>
 
   </footer>
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
+menuToggle.addEventListener('click', function () {
+  navLinks.classList.toggle('open');
+});
+
+navLinks.querySelectorAll('a').forEach(function (link) {
+  link.addEventListener('click', function () {
+    navLinks.classList.remove('open');
+  });
+});
+</script>
 </body>
 </html>
