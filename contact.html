@@ -213,39 +213,88 @@
       margin: 4px 0;
     }
 
-    @media (max-width: 900px) {
-      .header-inner {
-        flex-direction: column;
-      }
+.menu-toggle {
+  display: none;
+  background: #08275c;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 24px;
+  cursor: pointer;
+}
 
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+@media (max-width: 900px) {
+  .header-inner {
+    flex-direction: column;
+  }
 
-    @media (max-width: 600px) {
-      .hero h2 {
-        font-size: 32px;
-      }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
-      .hero p {
-        font-size: 15px;
-      }
+@media (max-width: 600px) {
 
-      .brand {
-        flex-direction: column;
-        text-align: center;
-      }
+  .header-inner {
+    position: relative;
+  }
 
-      nav a {
-        font-size: 13px;
-        padding: 8px 9px;
-      }
+  .menu-toggle {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-top: 15px;
+  }
 
-      .contact-card {
-        padding: 24px 20px;
-      }
-    }
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #08275c;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    z-index: 1000;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.20);
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav a {
+    width: 100%;
+    padding: 13px 18px;
+    color: #ffffff;
+    text-align: left;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    box-sizing: border-box;
+  }
+
+  nav a.active {
+    background: #176ca5;
+    color: #ffffff;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .brand {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-card {
+    padding: 24px 20px;
+  }
+}
   </style>
 </head>
 
@@ -266,7 +315,7 @@
           <p>Dandepally, Mancherial District, Telangana</p>
         </div>
       </a>
-
+<button class="menu-toggle" type="button">☰ Menu</button>
       <nav>
         <a href="index.html">Home</a>
         <a href="academics.html">Academics</a>
