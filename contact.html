@@ -440,6 +440,19 @@
     <p>Dandepally, Mancherial District, Telangana</p>
     <p>© 2026 TG Model School. All Rights Reserved.</p>
   </footer>
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
 
+menuToggle.addEventListener('click', function () {
+    nav.classList.toggle('open');
+});
+
+nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+        nav.classList.remove('open');
+    });
+});
+</script>
 </body>
 </html>
