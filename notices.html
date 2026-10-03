@@ -245,22 +245,81 @@
       font-size: 13px;
       margin: 3px 0;
     }
+/* MOBILE NAVIGATION */
 
-    /* MOBILE */
+.menu-toggle {
+    display: none;
+    background: #08275c;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 24px;
+    cursor: pointer;
+}
 
-    @media (max-width: 900px) {
+/* Tablet */
+@media (max-width: 900px) {
 
-      .header-inner {
+    .header-inner {
         flex-direction: column;
-      }
-
-      nav {
-        width: 100%;
-      }
     }
 
-    @media (max-width: 600px) {
+    nav {
+        width: 100%;
+    }
+}
 
+/* Mobile */
+@media (max-width: 600px) {
+
+    .header-inner {
+        padding: 12px 15px;
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 12px 18px;
+        font-size: 24px;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #08275c;
+        display: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 0;
+        z-index: 1000;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.20);
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 13px 18px;
+        color: #ffffff;
+        text-align: left;
+        border-top: 1px solid rgba(255,255,255,0.12);
+        border-radius: 0;
+    }
+
+    nav a.active {
+        background: #176ca5;
+        color: #ffffff;
+    }
+}
+    
       .header-inner {
         padding: 12px 15px;
       }
@@ -361,7 +420,7 @@
         </div>
 
       </a>
-
+<button class="menu-toggle" type="button">☰ Menu</button>
 
       <nav>
 
@@ -623,6 +682,19 @@
 
   </footer>
 
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
 
+menuToggle.addEventListener('click', function () {
+    nav.classList.toggle('open');
+});
+
+nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+        nav.classList.remove('open');
+    });
+});
+  </script>
 </body>
 </html>
