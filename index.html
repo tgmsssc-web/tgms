@@ -601,11 +601,13 @@
 /* Mobile navigation */
 @media (max-width: 700px) {
 
-  .main-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
+.main-nav{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    width:100%;
+    position:relative;
+}
   }
 
   .menu-toggle {
@@ -616,13 +618,17 @@
     font-size: 24px;
   }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #08275c;
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:#08275c;
+    position:absolute;
+    top:100%;
+    left:0;
+    z-index:1000;
+    box-shadow:0 6px 12px rgba(0,0,0,0.20);
   }
-
   .nav-links.open {
     display: flex;
   }
