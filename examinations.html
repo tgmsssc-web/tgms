@@ -165,7 +165,68 @@ footer {
   margin-top: 20px;
 }
 
+/* MOBILE NAVIGATION */
+.menu-toggle {
+  display: none;
+  background: #08275c;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
 @media (max-width: 750px) {
+
+  .header {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-top: 15px;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #08275c;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    z-index: 1000;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.20);
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav a {
+    width: 100%;
+    padding: 13px 18px;
+    color: #ffffff;
+    text-align: left;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+
+  nav a.active {
+    background: #176ca5;
+    color: #ffffff;
+  }
 
   .hero h1 {
     font-size: 30px;
@@ -182,6 +243,7 @@ footer {
   .school-name {
     font-size: 22px;
   }
+}
 }
   /* Examination Links */
 
@@ -246,6 +308,19 @@ Government Educational Institution
   <div class="subtitle">
     DANDEPALLY · MANCHERIAL DISTRICT · TELANGANA
   </div>
+
+  <button class="menu-toggle" type="button">☰ Menu</button>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="academics.html">Academics</a>
+    <a href="faculty.html">Faculty & Staff</a>
+    <a href="examinations.html" class="active">Examinations</a>
+    <a href="notices.html">Notices</a>
+    <a href="activities.html">Activities</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
 </div>
 
@@ -562,6 +637,24 @@ Government Educational Institution
   Mancherial District · Telangana
 
 </footer>
+</footer>
 
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+
+menuToggle.addEventListener('click', function () {
+  nav.classList.toggle('open');
+});
+
+nav.querySelectorAll('a').forEach(function (link) {
+  link.addEventListener('click', function () {
+    nav.classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>
 </body>
 </html>
