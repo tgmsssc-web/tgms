@@ -833,19 +833,20 @@ Academic Information
 </p>
 
 </footer>
-<script>
+
+  <script>
 const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
+const navLinks = document.querySelector('.nav-links');
 
 menuToggle.addEventListener('click', function () {
-    nav.classList.toggle('open');
+    navLinks.classList.toggle('open');
 });
 
-nav.querySelectorAll('a').forEach(function (link) {
+navLinks.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () {
-        nav.classList.remove('open');
+        navLinks.classList.remove('open');
     });
 });
-</script>
+  </script>
 </body>
 </html>
