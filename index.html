@@ -647,6 +647,655 @@
   }
   }
 }
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="TG Model School & Junior College, Dandepally, Mancherial District, Telangana">
+
+  <title>TG Model School & Junior College | Dandepally</title>
+
+  <link rel="icon" href="logo.png" type="image/png">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f8fc;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    /* ================= HEADER ================= */
+
+    .top-bar {
+      background: #062b57;
+      color: white;
+      text-align: center;
+      padding: 10px 15px;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    .header {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-inner {
+      max-width: 1150px;
+      margin: auto;
+      padding: 14px 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: #0b3d70;
+    }
+
+    .brand img {
+      width: 78px;
+      height: 78px;
+      object-fit: contain;
+    }
+
+    .brand-text h1 {
+      font-size: 22px;
+      line-height: 1.2;
+      color: #073b70;
+    }
+
+    .brand-text p {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #6b7280;
+      letter-spacing: 0.5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #123f63;
+      padding: 9px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #eaf3fb;
+      color: #0b4f8a;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      background:
+        radial-gradient(circle at 85% 30%,
+        rgba(255,255,255,0.10),
+        transparent 35%),
+        linear-gradient(135deg, #062b57, #0b4f8a);
+
+      color: white;
+      min-height: 540px;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-inner {
+      max-width: 1150px;
+      width: 100%;
+      margin: auto;
+      padding: 70px 25px;
+    }
+
+    .hero-label {
+      color: #f4c430;
+      font-weight: bold;
+      font-size: 15px;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    .hero h2 {
+      font-size: 58px;
+      line-height: 1.05;
+      max-width: 850px;
+      margin-bottom: 25px;
+    }
+
+    .hero h2 span {
+      color: #f4c430;
+    }
+
+    .hero-description {
+      font-size: 19px;
+      max-width: 700px;
+      color: #e6eef7;
+      margin-bottom: 18px;
+    }
+
+    .location {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .btn-primary {
+      background: #f4c430;
+      color: #062b57;
+    }
+
+    .btn-primary:hover {
+      background: #ffd95a;
+    }
+
+    .btn-outline {
+      color: white;
+      border: 1px solid rgba(255,255,255,0.6);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* ================= MAIN ================= */
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section-heading {
+      margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+      color: #0b4f8a;
+      font-size: 31px;
+      border-left: 5px solid #f4c430;
+      padding-left: 13px;
+    }
+
+    .section-heading p {
+      margin-top: 8px;
+      color: #667085;
+    }
+
+    /* ================= LATEST UPDATES ================= */
+
+    .updates {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .update-card {
+  background: white;
+  padding: 24px;
+  border-radius: 10px;
+  border-top: 4px solid #0b4f8a;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+    }
+    
+
+    .update-date {
+      color: #b48a00;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .update-card h3 {
+      color: #123f63;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .update-card p {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    .update-link {
+      display: inline-block;
+      margin-top: 12px;
+      color: #0b4f8a;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* ================= QUICK LINKS ================= */
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+  .quick-card {
+    background: white;
+    padding: 26px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+    border-top: 4px solid #f4c430;
+    min-height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+    .quick-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .quick-number {
+      color: #c29b12;
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .quick-card h3 {
+      color: #0b3d70;
+      font-size: 19px;
+      margin-bottom: 6px;
+    }
+
+    .quick-card p {
+      color: #667085;
+      font-size: 13px;
+    }
+
+    /* ================= SCHOOL AT A GLANCE ================= */
+
+    .glance {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .glance-card {
+    background: white;
+    text-align: center;
+    padding: 28px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+    border-top: 4px solid #f4c430;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    .glance-card strong {
+      display: block;
+      color: #0b4f8a;
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+
+    .glance-card span {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    /* ================= PROGRAMMES ================= */
+
+    .programmes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .programme-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+    border-left: 5px solid #f4c430;
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    .programme-number {
+      color: #b38b00;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .programme-card h3 {
+      color: #0b3d70;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .programme-card p {
+      color: #667085;
+    }
+
+    /* ================= STUDENT ACTIVITIES ================= */
+
+    .activities {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .activity-card {
+      background: #eaf3fb;
+      min-height: 170px;
+      padding: 25px;
+      border-radius: 10px;
+      display: flex;
+      align-items: flex-end;
+      border-bottom: 4px solid #0b4f8a;
+    }
+
+    .activity-card h3 {
+      color: #0b3d70;
+      font-size: 20px;
+    }
+
+    /* ================= INFORMATION ================= */
+
+    .info-box {
+      background: #eaf3fb;
+      border-left: 5px solid #0b4f8a;
+      padding: 28px;
+      border-radius: 8px;
+    }
+
+    .info-box h3 {
+      color: #0b3d70;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .info-box p {
+      color: #4b5563;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #123f63;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    footer h3 {
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    footer p {
+      font-size: 13px;
+      margin: 3px 0;
+      color: #e6eef7;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 900px) {
+
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero h2 {
+        font-size: 45px;
+      }
+
+      .updates {
+    grid-template-columns: repeat(2, 1fr);
+      }
+
+      .quick-links {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .glance {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .activities {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .top-bar {
+        font-size: 13px;
+      }
+
+      .header-inner {
+        padding: 12px 15px;
+      }
+
+      .brand {
+        width: 100%;
+      }
+
+      .brand img {
+        width: 68px;
+        height: 68px;
+      }
+
+      .brand-text h1 {
+        font-size: 18px;
+      }
+
+      .brand-text p {
+        font-size: 11px;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: center;
+      }
+
+      nav a {
+        font-size: 13px;
+        padding: 7px 9px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-inner {
+        padding: 60px 25px;
+      }
+
+      .hero-label {
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+
+      .hero h2 {
+        font-size: 42px;
+      }
+
+      .hero-description {
+        font-size: 17px;
+      }
+
+      .location {
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 40px 15px;
+      }
+
+      .section {
+        margin-bottom: 45px;
+      }
+
+      .section-heading h2 {
+        font-size: 25px;
+      }
+
+      .quick-links {
+        grid-template-columns: 1fr;
+      }
+
+      .glance {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .programmes {
+        grid-template-columns: 1fr;
+      }
+    
+      .activity-card {
+        min-height: 140px;
+      }
+    
+.updates {
+    grid-template-columns: 1fr;
+}
+    }   
+    /* =============== MOBILE NAVIGATION =============== */
+
+.menu-toggle {
+  display: none;
+  background: #08275c;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-links a {
+  display: inline-block;
+}
+
+/* Mobile navigation */
+@media (max-width: 700px) {
+
+.main-nav{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    width:100%;
+    position:relative;
+}
+  }
+
+  .menu-toggle {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px 18px;
+    font-size: 24px;
+  }
+
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:#08275c;
+    position:absolute;
+    top:100%;
+    left:0;
+    z-index:1000;
+    box-shadow:0 6px 12px rgba(0,0,0,0.20);
+  }
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 13px 18px;
+    color: #ffffff;
+    text-align: left;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .nav-links a.active {
+  background: #176ca5;
+  color: #ffffff !important;
+  }
+  }
+}
   </style>
   /* ================= DUSSEHRA HOLIDAY POPUP ================= */
 
@@ -802,6 +1451,484 @@
   }
 }
   
+</head>
+
+
+<body>
+
+
+  <!-- ================= TOP BAR ================= -->
+
+  <div class="top-bar">
+    Government Educational Institution
+  </div>
+
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="header">
+
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+
+        <img src="logo.png"
+             alt="TG Model School Logo">
+
+        <div class="brand-text">
+
+          <h1>
+            TG MODEL SCHOOL & JUNIOR COLLEGE
+          </h1>
+
+          <p>
+            DANDEPALLY · MANCHERIAL DISTRICT · TELANGANA
+          </p>
+
+        </div>
+
+      </a>
+
+
+      <nav class="main-nav">
+
+  <button class="menu-toggle" aria-label="Open navigation">
+    ☰
+  </button>
+
+  <div class="nav-links">
+
+    <a href="index.html" class="active">
+      Home
+    </a>
+
+    <a href="academics.html">
+      Academics
+    </a>
+
+    <a href="faculty.html">
+      Faculty &amp; Staff
+    </a>
+
+    <a href="examinations.html">
+      Examinations
+    </a>
+
+    <a href="notices.html">
+      Notices
+    </a>
+
+    <a href="activities.html">
+      Activities
+    </a>
+
+    <a href="gallery.html">
+      Gallery
+    </a>
+
+    <a href="contact.html">
+      Contact
+    </a>
+
+  </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <div class="hero-label">
+        TG MODEL SCHOOL & JUNIOR COLLEGE
+      </div>
+
+      <h2>
+        Learning Today.<br>
+        <span>Leading Tomorrow.</span>
+      </h2>
+
+      <p class="hero-description">
+  Empowering students through quality education,
+  discipline, knowledge and holistic development.
+      </p>
+      <p class="location">
+        Dandepally, Mancherial District, Telangana
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="academics.html"
+           class="btn btn-primary">
+          Explore Our School
+        </a>
+
+        <a href="examinations.html"
+           class="btn btn-outline">
+          View Examinations
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= MAIN ================= -->
+
+  <main class="container">
+
+
+<!-- ================= LATEST UPDATES ================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <h2>
+            Latest Updates
+        </h2>
+
+        <p>
+            Important information and updates from TG Model School & Junior College.
+        </p>
+
+    </div>
+
+    <div class="updates">
+
+        <article class="update-card">
+
+            <div class="update-date">
+                ACADEMIC
+            </div>
+
+            <h3>
+                Academic Programmes
+            </h3>
+
+            <p>
+                Information about school education, Junior College programmes,
+                curriculum and academic learning.
+            </p>
+
+            <a href="academics.html" class="update-link">
+                View Academics →
+            </a>
+
+        </article>
+
+        <article class="update-card">
+
+            <div class="update-date">
+                EXAMINATIONS
+            </div>
+
+            <h3>
+                Examination Information
+            </h3>
+
+            <p>
+                Examination schedules, assessments and important examination
+                related information for students.
+            </p>
+
+            <a href="examinations.html" class="update-link">
+                View Examinations →
+            </a>
+
+        </article>
+
+        <article class="update-card">
+
+            <div class="update-date">
+                SCHOOL NOTICE
+            </div>
+
+            <h3>
+                Latest Notices
+            </h3>
+
+            <p>
+                School notices, announcements and important information
+                for students and parents.
+            </p>
+
+            <a href="notices.html" class="update-link">
+                View Notices →
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+    <!-- ================= SCHOOL AT A GLANCE ================= -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <h2>
+          School at a Glance
+        </h2>
+
+        <p>
+          A quick overview of the school.
+        </p>
+
+      </div>
+
+
+      <div class="glance">
+
+
+        <div class="glance-card">
+
+          <strong>
+            VI – X
+          </strong>
+
+          <span>
+            School Classes
+          </span>
+
+        </div>
+
+
+        <div class="glance-card">
+
+          <strong>
+            2
+          </strong>
+
+          <span>
+            Sections per Class
+            (A & B)
+          </span>
+
+        </div>
+
+
+        <div class="glance-card">
+
+          <strong>
+    174
+</strong>
+
+<span>
+    Present School Strength
+</span>
+        </div>
+
+
+        <div class="glance-card">
+
+    <strong>
+        151
+    </strong>
+
+    <span>
+        Junior College Strength
+    </span>
+
+</div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ACADEMIC PROGRAMMES ================= -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <h2>
+          Academic Programmes
+        </h2>
+
+        <p>
+          Education programmes offered by the institution.
+        </p>
+
+      </div>
+
+
+      <div class="programmes">
+
+
+        <div class="programme-card">
+
+          <div class="programme-number">
+            PROGRAMME 01
+          </div>
+
+          <h3>
+            School Education
+          </h3>
+
+          <p>
+            Classes VI to X with class-wise academic
+            learning, assessments, co-curricular
+            activities and student development.
+          </p>
+
+        </div>
+
+
+        <div class="programme-card">
+
+          <div class="programme-number">
+            PROGRAMME 02
+          </div>
+
+          <h3>
+            Junior College
+          </h3>
+
+          <p>
+            Intermediate-level education with focused
+            subject learning, academic guidance and
+            preparation for higher education.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= STUDENT ACTIVITIES ================= -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <h2>
+          Student Activities
+        </h2>
+
+        <p>
+          Learning extends beyond the classroom.
+        </p>
+
+      </div>
+
+
+      <div class="activities">
+
+
+        <div class="activity-card">
+
+          <h3>
+            Classroom Learning
+          </h3>
+
+        </div>
+
+
+        <div class="activity-card">
+
+          <h3>
+            Sports & Games
+          </h3>
+
+        </div>
+
+
+        <div class="activity-card">
+
+          <h3>
+            Cultural Activities
+          </h3>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= IMPORTANT INFORMATION ================= -->
+
+    <section class="section">
+
+      <div class="info-box">
+
+        <h3>
+          Important Information
+        </h3>
+
+        <p>
+          Students and parents can use this website to
+          access academic information, examination details,
+          faculty information, school notices and other
+          important updates of TG Model School & Junior College.
+        </p>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <h3>
+      TG MODEL SCHOOL & JUNIOR COLLEGE
+    </h3>
+
+    <p>
+      Government Educational Institution
+    </p>
+
+    <p>
+      Dandepally, Mancherial District, Telangana
+    </p>
+
+    <p>
+      © 2026 TG Model School. All Rights Reserved.
+    </p>
+
+  </footer>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', function () {
+    navLinks.classList.toggle('open');
+  });
+
+  navLinks.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>
+  </style>
+  ;
 </head>
 
 
