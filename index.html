@@ -648,6 +648,160 @@
   }
 }
   </style>
+  /* ================= DUSSEHRA HOLIDAY POPUP ================= */
+
+.holiday-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 20, 40, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 99999;
+  animation: holidayFadeIn 0.35s ease;
+}
+
+.holiday-popup {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 35px 30px 30px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.30);
+  border-top: 6px solid #f4c430;
+  animation: holidayPopupIn 0.4s ease;
+}
+
+.holiday-icon {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.holiday-popup h2 {
+  color: #062b57;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.holiday-subtitle {
+  color: #b48a00;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.holiday-date {
+  color: #123f63;
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.reopen-box {
+  background: #eaf3fb;
+  border-left: 5px solid #0b4f8a;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 20px 0;
+  color: #123f63;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.reopen-box strong {
+  color: #0b4f8a;
+}
+
+.holiday-message {
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.holiday-message strong {
+  color: #0b4f8a;
+}
+
+.holiday-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: transparent;
+  color: #667085;
+  font-size: 28px;
+  line-height: 35px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.holiday-close:hover {
+  background: #f1f5f9;
+  color: #062b57;
+}
+
+.holiday-button {
+  display: inline-block;
+  border: none;
+  background: #0b4f8a;
+  color: white;
+  padding: 11px 28px;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.holiday-button:hover {
+  background: #062b57;
+}
+
+@keyframes holidayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes holidayPopupIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .holiday-popup {
+    padding: 30px 20px 25px;
+  }
+
+  .holiday-popup h2 {
+    font-size: 25px;
+  }
+
+  .holiday-date {
+    font-size: 16px;
+  }
+
+  .reopen-box {
+    font-size: 15px;
+  }
+}
+  
 </head>
 
 
