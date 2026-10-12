@@ -333,6 +333,35 @@
         color: #ffffff !important;
     }
 }
+.page-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 35px auto;
+    width: 100%;
+}
+
+.page-navigation .nav-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #17466b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.page-navigation .home-btn {
+    background: #ffcc33;
+    color: #173c59;
+}
+
+.page-navigation .nav-btn:hover {
+    opacity: 0.9;
+}
+    
   </style>
 </head>
 
@@ -486,7 +515,7 @@
 
 <div class="page-navigation">
     <a href="javascript:history.back()" class="nav-btn">← Back</a>
-    <a href="index.html" class="nav-btn">⌂ Home</a>
+    <a href="index.html" class="nav-btn home-btn">Home</a>
 </div>
   
   <footer>
