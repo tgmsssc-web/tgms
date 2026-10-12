@@ -424,69 +424,211 @@
 
 <body>
   
-<!-- Telangana Rising and Education Officials Header -->
-<section style="background:linear-gradient(135deg,#eaf4ff,#ffffff);padding:18px 12px;text-align:center;border-bottom:4px solid #1675ad;">
-  <img
-    src="https://schooledu.telangana.gov.in/TGVSK/images/1rising.png"
-    alt="Telangana Rising"
-    style="width:100px;max-width:30%;height:auto;margin-bottom:8px;"
-  >
 
-<img
-src="IMG_ab980054-605c-4cb3-b427-0d2146bc59a6.webp"
-alt="Government of Telangana Emblem"
-style="width:85px;height:85px;object-fit:contain;margin:0 auto 8px;display:block;"
->
+<!-- Telangana Rising Professional Header -->
+<section class="telangana-rising-header">
+  <div class="tr-main">
 
-  <h2 style="margin:4px 0;color:#123b70;font-size:22px;">
-    GOVERNMENT OF TELANGANA
-  </h2>
-
-  <h3 style="margin:4px 0 16px;color:#0876ad;font-size:20px;">
-    TELANGANA RISING
-  </h3>
-
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:14px;max-width:850px;margin:0 auto;">
-
-    <div style="background:#fff;border:1px solid #d8e4ef;border-radius:10px;padding:12px;box-shadow:0 3px 10px #123b7015;">
+    <div class="tr-rising-logo">
       <img
-        src="https://www.telangana.gov.in/wp-content/uploads/2025/11/CM-card.png"
-        alt="Sri A. Revanth Reddy, Chief Minister"
-        style="height:125px;max-width:100%;object-fit:contain;margin:auto;"
+        src="https://schooledu.telangana.gov.in/TGVSK/images/1rising.png"
+        alt="Telangana Rising"
       >
-      <h4 style="color:#123b70;font-size:14px;margin:8px 0 4px;">
-        Sri A. Revanth Reddy
-      </h4>
-      <p style="font-size:12px;margin:0;">Hon'ble Chief Minister</p>
     </div>
 
-    <div style="background:#fff;border:1px solid #d8e4ef;border-radius:10px;padding:12px;box-shadow:0 3px 10px #123b7015;">
+    <div class="tr-official tr-cm">
+      <img
+        src="https://www.telangana.gov.in/wp-content/uploads/2025/11/CM-card.png"
+        alt="Sri A. Revanth Reddy"
+      >
+      <strong>Sri A. Revanth Reddy</strong>
+      <span>Hon'ble Chief Minister</span>
+    </div>
+
+    <div class="tr-title">
+      <img
+        src="IMG_ab980054-605c-4cb3-b427-0d2146bc59a6.webp"
+        alt="Government of Telangana Emblem"
+      >
+      <h2>GOVERNMENT OF TELANGANA</h2>
+      <h3>TELANGANA RISING</h3>
+    </div>
+
+    <div class="tr-official">
       <img
         src="https://schooledu.telangana.gov.in/TGVSK/images/newIAS1.jpeg"
         alt="Dr. Yogita Rana, IAS"
-        style="height:125px;max-width:100%;object-fit:contain;margin:auto;"
       >
-      <h4 style="color:#123b70;font-size:14px;margin:8px 0 4px;">
-        Dr. Yogita Rana, IAS
-      </h4>
-      <p style="font-size:12px;margin:0;">Secretary to Government</p>
+      <strong>Dr. Yogita Rana, IAS</strong>
+      <span>Secretary to Government</span>
     </div>
 
-    <div style="background:#fff;border:1px solid #d8e4ef;border-radius:10px;padding:12px;box-shadow:0 3px 10px #123b7015;">
+    <div class="tr-official">
       <img
         src="https://schooledu.telangana.gov.in/TGVSK/images/NewDirector.jpg"
         alt="Dr. E. Naveen Nicolas, IAS"
-        style="height:125px;max-width:100%;object-fit:contain;margin:auto;"
       >
-      <h4 style="color:#123b70;font-size:14px;margin:8px 0 4px;">
-        Dr. E. Naveen Nicolas, IAS
-      </h4>
-      <p style="font-size:12px;margin:0;">Commissioner &amp; Director of School Education</p>
+      <strong>Dr. E. Naveen Nicolas, IAS</strong>
+      <span>Commissioner &amp; Director of School Education</span>
     </div>
 
   </div>
+
+  <div class="tr-school-strip">
+    TG MODEL SCHOOL &amp; JUNIOR COLLEGE
+    <span>|</span> LINGAPUR
+    <span>|</span> MANCHERIAL DISTRICT
+  </div>
 </section>
-<!-- End Telangana Rising Header -->
+
+<style>
+.telangana-rising-header {
+  background: linear-gradient(120deg, #e4f5ff, #ffffff, #d9f0ff);
+  font-family: Arial, sans-serif;
+  border-bottom: 3px solid #1682c4;
+}
+
+.tr-main {
+  max-width: 1500px;
+  margin: auto;
+  padding: 14px 18px;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 1.8fr 1.1fr 1.1fr;
+  align-items: center;
+  gap: 14px;
+}
+
+.tr-rising-logo,
+.tr-title {
+  text-align: center;
+}
+
+.tr-rising-logo img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+}
+
+.tr-title img {
+  width: 95px;
+  height: 95px;
+  object-fit: contain;
+}
+
+.tr-title h2 {
+  color: #123b70;
+  font-size: clamp(15px, 1.6vw, 25px);
+  margin: 5px 0;
+  line-height: 1.2;
+}
+
+.tr-title h3 {
+  color: #0876ad;
+  font-size: clamp(14px, 1.5vw, 22px);
+  margin: 5px 0;
+}
+
+.tr-official {
+  background: #fff;
+  border: 1px solid #d8e4ef;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 3px 12px #123b7015;
+  min-width: 0;
+}
+
+.tr-official img {
+  display: block;
+  width: 100%;
+  height: 145px;
+  object-fit: contain;
+  margin: 0 auto 7px;
+}
+
+.tr-official strong,
+.tr-official span {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.tr-official strong {
+  color: #123b70;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.tr-official span {
+  color: #333;
+  font-size: 12px;
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+.tr-school-strip {
+  background: #103f78;
+  color: #fff;
+  text-align: center;
+  padding: 11px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.tr-school-strip span {
+  margin: 0 8px;
+  color: #8fd9ff;
+}
+
+@media (max-width: 760px) {
+  .tr-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .tr-rising-logo {
+    grid-column: 1 / -1;
+  }
+
+  .tr-rising-logo img {
+    max-width: 135px;
+  }
+
+  .tr-title {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .tr-title img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .tr-official img {
+    height: 115px;
+  }
+
+  .tr-official strong {
+    font-size: 12px;
+  }
+
+  .tr-official span {
+    font-size: 11px;
+  }
+
+  .tr-school-strip {
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    line-height: 1.6;
+  }
+
+  .tr-school-strip span {
+    margin: 0 3px;
+  }
+}
+</style>
+
 <div class="topbar">
     TG MODEL SCHOOL &amp; JUNIOR COLLEGE | LINGAPUR | MANCHERIAL DISTRICT
   </div>
