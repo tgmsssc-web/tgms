@@ -814,9 +814,30 @@ Higher Education Preparation
 
 </section>
 
-</main>
+<!-- BOTTOM NAVIGATION -->
+<div style="display:flex; justify-content:center; 
+gap:15px; flex-wrap:wrap; padding:0 15px 40px;">
 
-<!-- FOOTER -->
+  <button onclick="if (history.length > 1) {
+    history.back();
+  } else {
+    window.location.href='index.html';
+  }"
+  style="background:#123f63; color:white; 
+  border:0; padding:12px 24px; border-radius:6px;
+  font-size:15px; cursor:pointer;">
+    &#8592; Back
+  </button>
+
+  <a href="index.html"
+  style="background:#f4c430; color:#062b57;
+  text-decoration:none; padding:12px 24px;
+  border-radius:6px; font-weight:bold;">
+    Home
+  </a>
+
+</div>
+
 
 <footer>
 
