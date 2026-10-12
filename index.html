@@ -662,6 +662,30 @@ font-size: 17px;
 font-size: 15px;
 }
 }
+  
+/* Final photo size adjustment */
+.tr-official.tr-cm img {
+  height: 145px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.tr-official:not(.tr-cm) img {
+  height: 105px;
+  width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .tr-official.tr-cm img {
+    height: 125px;
+  }
+
+  .tr-official:not(.tr-cm) img {
+    height: 90px;
+  }
+}
+
 </style>
 
 
