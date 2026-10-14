@@ -746,6 +746,25 @@ font-size: 15px;
 .flash-news marquee {
   flex: 1;
 }
+  .holiday-title {
+  color: #fde047;
+  font-weight: 800;
+}
+
+.holiday-dates {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.reopen-title {
+  color: #86efac;
+  font-weight: 800;
+}
+
+.reopen-date {
+  color: #ffffff;
+  font-weight: 700;
+}
 </style>
 
 
@@ -778,12 +797,24 @@ font-size: 15px;
       </nav>
     </div>
   </header>
-<div class="flash-news">
-  <strong>FLASH NEWS</strong>
-  <marquee behavior="scroll" direction="left" scrollamount="5">
-    DASARA HOLIDAYS: 10 OCTOBER – 22 OCTOBER 2026 |
-    SCHOOL REOPENS ON FRIDAY, 23 OCTOBER 2026
-  </marquee>
+  <div class="flash-news">
+<div class="announcement-track">
+  <span>
+    <strong class="holiday-title">DASARA HOLIDAYS:</strong>
+    <span class="holiday-dates">10 OCTOBER – 22 OCTOBER 2026</span>
+    &nbsp; | &nbsp;
+    <strong class="reopen-title">SCHOOL REOPENS:</strong>
+    <span class="reopen-date">FRIDAY, 23 OCTOBER 2026</span>
+    &nbsp; • &nbsp;
+  </span>
+  <span aria-hidden="true">
+    <strong class="holiday-title">DASARA HOLIDAYS:</strong>
+    <span class="holiday-dates">10 OCTOBER – 22 OCTOBER 2026</span>
+    &nbsp; | &nbsp;
+    <strong class="reopen-title">SCHOOL REOPENS:</strong>
+    <span class="reopen-date">FRIDAY, 23 OCTOBER 2026</span>
+    &nbsp; • &nbsp;
+  </span>
 </div>
   <main>
     <section class="hero" id="home">
