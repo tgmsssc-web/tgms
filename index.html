@@ -989,8 +989,7 @@ font-size: 15px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  animation: homeLinksScroll 45s linear infinite;
-}
+  animation: homeLinksScroll 25s linear infinite !important;
 
 #home-useful-links .home-links-track a {
   display: block;
@@ -1010,11 +1009,6 @@ font-size: 15px;
   to { transform: translateY(-50%); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  #home-useful-links .home-links-track {
-    animation: none;
-  }
-}
 </style>
   
 
