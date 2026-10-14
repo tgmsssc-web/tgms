@@ -743,24 +743,54 @@ font-size: 15px;
   .flash-news {
   display: flex;
   align-items: center;
-  gap: 12px;
+  overflow: hidden;
   background: #b91c1c;
   color: #fff;
   padding: 10px 14px;
   font-weight: bold;
-  overflow: hidden;
 }
 
-.flash-news strong {
-  background: #facc15;
-  color: #7f1d1d;
-  padding: 5px 9px;
+.announcement-track {
+  display: flex;
+  width: max-content;
+  flex-shrink: 0;
+  animation: flash-scroll 20s linear infinite;
+}
+
+.announcement-track span {
+  flex-shrink: 0;
   white-space: nowrap;
-  border-radius: 4px;
+  padding-right: 40px;
 }
 
-.flash-news marquee {
-  flex: 1;
+@keyframes flash-scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.flash-news:hover .announcement-track {
+  animation-play-state: paused;
+}
+
+.holiday-title {
+  color: #fde047;
+  font-weight: 800;
+}
+
+.holiday-dates,
+.reopen-date {
+  color: #fff;
+  font-weight: 700;
+}
+
+.reopen-title {
+  color: #86efac;
+  font-weight: 800;
+}
 }
   .holiday-title {
   color: #fde047;
