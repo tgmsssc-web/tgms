@@ -419,6 +419,9 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
     }
+    
+
+
   </style>
 </head>
 
@@ -951,7 +954,10 @@ font-size: 15px;
 
     
 <div class="home-links-window">
-  <div class="home-links-track">
+  
+    
+<div class="home-links-track">
+  <div class="home-links-group">
     <a class="text-link" href="https://tgms.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Telangana Model Schools ↗</a>
     <a class="text-link" href="https://schooledu.telangana.gov.in/" target="_blank" rel="noopener noreferrer">School Education Department ↗</a>
     <a class="text-link" href="https://scert.telangana.gov.in/" target="_blank" rel="noopener noreferrer">SCERT Telangana ↗</a>
@@ -964,8 +970,23 @@ font-size: 15px;
     <a class="text-link" href="https://ts.meeseva.telangana.gov.in/" target="_blank" rel="noopener noreferrer">MeeSeva Telangana ↗</a>
     <a class="text-link" href="https://tgss.telangana.gov.in/" target="_blank" rel="noopener noreferrer">TGSS Telangana ↗</a>
     <a class="text-link" href="http://wdcw.tg.nic.in/" target="_blank" rel="noopener noreferrer">Women Development &amp; Child Welfare ↗</a>
+  </div>
+  <div class="home-links-group" aria-hidden="true">
+    <a class="text-link" href="https://tgms.telangana.gov.in/" tabindex="-1">Telangana Model Schools ↗</a>
+    <a class="text-link" href="https://schooledu.telangana.gov.in/" tabindex="-1">School Education Department ↗</a>
+    <a class="text-link" href="https://scert.telangana.gov.in/" tabindex="-1">SCERT Telangana ↗</a>
+    <a class="text-link" href="https://tgbie.cgg.gov.in/" tabindex="-1">Telangana Board of Intermediate Education ↗</a>
+    <a class="text-link" href="https://diksha.gov.in/" tabindex="-1">DIKSHA Learning Portal ↗</a>
+    <a class="text-link" href="https://telanganaepass.cgg.gov.in/" tabindex="-1">Telangana ePASS ↗</a>
+    <a class="text-link" href="https://scholarships.gov.in/" tabindex="-1">National Scholarship Portal ↗</a>
+    <a class="text-link" href="https://tgsrtc.telangana.gov.in/" tabindex="-1">TGSRTC ↗</a>
+    <a class="text-link" href="http://bse.telangana.gov.in/" tabindex="-1">SSC Board – Telangana ↗</a>
+    <a class="text-link" href="https://ts.meeseva.telangana.gov.in/" tabindex="-1">MeeSeva Telangana ↗</a>
+    <a class="text-link" href="https://tgss.telangana.gov.in/" tabindex="-1">TGSS Telangana ↗</a>
+    <a class="text-link" href="http://wdcw.tg.nic.in/" tabindex="-1">Women Development &amp; Child Welfare ↗</a>
+  </div>
+</div>
 
-    <a class="text-link" href="https://tgms.telangana.gov.in/" target="_blank" rel="noopener noreferrer" aria-hidden="true">Telangana Model Schools ↗</a>
   </div>
 </div>
     
@@ -988,9 +1009,15 @@ font-size: 15px;
 #home-useful-links .home-links-track {
   display: flex;
   flex-direction: column;
+  gap: 0px;
+  animation: homeLinksScroll 7s linear infinite !important;
+}
+  #home-useful-links .home-links-group {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
-  animation: homeLinksScroll 8s linear infinite !important;
-
+  flex-shrink: 0;
+  }
 #home-useful-links .home-links-track a {
   display: block;
   flex-shrink: 0;
