@@ -724,6 +724,28 @@ font-size: 15px;
   font-size: 8px;
   line-height: 1.2;
 }
+  .flash-news {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #b91c1c;
+  color: #fff;
+  padding: 10px 14px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.flash-news strong {
+  background: #facc15;
+  color: #7f1d1d;
+  padding: 5px 9px;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+
+.flash-news marquee {
+  flex: 1;
+}
 </style>
 
 
@@ -756,7 +778,13 @@ font-size: 15px;
       </nav>
     </div>
   </header>
-
+<div class="flash-news">
+  <strong>FLASH NEWS</strong>
+  <marquee behavior="scroll" direction="left" scrollamount="5">
+    DASARA HOLIDAYS: 10 OCTOBER – 22 OCTOBER 2026 |
+    SCHOOL REOPENS ON FRIDAY, 23 OCTOBER 2026
+  </marquee>
+</div>
   <main>
     <section class="hero" id="home">
       <div class="hero-inner">
