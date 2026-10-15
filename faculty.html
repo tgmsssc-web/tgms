@@ -403,6 +403,60 @@
   }
 
 }
+    /* SCHOOL AT A GLANCE - RESPONSIVE TABLES */
+.section table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 12px 0 24px;
+  background: #ffffff;
+  font-size: 14px;
+}
+
+.section table th,
+.section table td {
+  border: 1px solid #d5e1eb;
+  padding: 10px 6px;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.section table thead th {
+  background: #17476b;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.section table tbody tr:nth-child(even) {
+  background: #f0f6fb;
+}
+
+.section table tbody tr:last-child {
+  background: #e1edf7;
+  font-weight: 700;
+}
+
+.section table th:first-child,
+.section table td:first-child {
+  text-align: left;
+}
+
+.section h3 {
+  color: #17476b;
+  margin: 22px 0 8px;
+  font-size: 17px;
+}
+
+@media (max-width: 480px) {
+  .section table {
+    font-size: 13px;
+  }
+
+  .section table th,
+  .section table td {
+    padding: 9px 4px;
+  }
+}
   </style>
 </head>
 
